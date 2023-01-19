@@ -18,7 +18,7 @@ This is a solution to the [Product preview card component](https://www.frontendm
 ### Links
 <!-- FIX THE URL IN FEM! -->
 - Solution URL: [https://www.frontendmentor.io/solutions/here-is-my-solution-to-the-cardproductcomponent-LGSa8O-BX6]
-- Live Site URL: [https://fromlukdev.github.io/Product-Card-FEM-Challenge/Product-Card/index.html#/Product-Card/]
+- Live Site URL: [https://fromlukdev.github.io/product-card/]
 
 ### Built with
 - Semantic HTML5 markup
