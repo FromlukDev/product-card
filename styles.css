@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  background-color: rgb(246, 235, 215);
+}
+
+:root {
+  --text-color: hsl(227, 13%, 59%);
+  --btn-color: rgb(56, 107, 90);
+  --btn-hover-color: rgb(31, 85, 66);
+  --main-font: Montserrat;
+  --accent-font: Fraunces;
+}
+/* --------Mobile First-------- */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  max-width: 35.5rem;
+}
+
+.mobile-img {
+  width: 35.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.desktop-img {
+  display: none;
+}
+
+figcaption {
+  text-transform: uppercase;
+  margin: 2.5rem 0 1.2rem;
+  font-size: 1.2rem;
+  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5rem;
+  color: var(--text-color);
+}
+.hero-title {
+  margin: 0;
+  font-family: var(--accent-font), serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+
+.text {
+  font-size: 1.4rem;
+  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  text-align: left;
+  line-height: 1.7;
+  margin: 2rem auto;
+}
+
+.general-text {
+  margin: 0 3rem;
+}
+
+.price-main {
+  font-size: 3.2rem;
+  font-family: var(--accent-font), serif;
+  font-weight: normal;
+  color: var(--btn-color);
+  margin-right: 2rem;
+}
+
+/* I tried to use the [vertical-align: middle;] here at [div class="pricing"] but
+no success. Let me know how would you do it without using
+[position: relative, bottom: .8rem;] tks. */
+.price-cut {
+  position: relative;
+  bottom: 0.8rem;
+  text-decoration: line-through;
+  font-size: 1.4rem;
+  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+}
+
+.btn-cart {
+  background-color: var(--btn-color);
+  font-size: 1.4rem;
+  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.8rem 3rem;
+  text-align: center;
+  margin: 1.5rem 0 3rem;
+  cursor: pointer;
+}
+.btn-cart:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.cart-icon {
+  margin-right: 1.2rem;
+}
+
+/* Desktop Version */
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 2rem;
+    max-width: 70rem;
+  }
+
+  .desktop-img {
+    display: block;
+    width: 35.5rem;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  figcaption {
+    margin: 3rem 0 1.2rem 0;
+  }
+
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  }
+
+  .general-text {
+    margin: 1rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pricing {
+    margin-bottom: 1rem;
+  }
+
+  .price-main {
+    font-size: 3.8rem;
+  }
+
+  .price-cut {
+    font-size: 1.6rem;
+  }
+
+  .btn-cart {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
